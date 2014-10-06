@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "CrossTemplate",
   "bin": {
+    "template": "./bin/CrossTemplate",
     "CrossTemplate": "./bin/CrossTemplate"
   },
   "main": "index.js",
@@ -11,15 +12,21 @@
     "url": "git://github.com/xudafeng/CrossTemplate.git"
   },
   "dependencies": {
-    "microtemplate": "0.1.2"
+    "microtemplate": "0.1.2",
+    "commander": "2.0.0",
+    "marked": "0.3.2",
+    "logx": "*",
+    "xutil":"0.1.1",
+    "colorx": "0.0.5"
   },
-  "keywords": ["CrossTemplate"],
+  "keywords": ["template"],
   "devDependencies": {
     "mocha": "*",
     "should": "*",
     "istanbul": "*",
     "should": "~4.0.4",
-    "should-http": "0.0.2"
+    "should-http": "0.0.2",
+    "startserver": "*"
   },
   "scripts": {
     "test": "mocha test/**/*.js",
