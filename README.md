@@ -18,7 +18,7 @@ CrossTemplate
 [download-image]: https://img.shields.io/npm/dm/CrossTemplate.svg?style=flat-square
 [download-url]: https://npmjs.org/package/CrossTemplate
 
-> CrossTemplate by xdf
+> CrossTemplate
 
 ## Installment
 
@@ -26,11 +26,7 @@ CrossTemplate
 $ npm i CrossTemplate -g
 ```
 
-## Quick Start
 
-```bash
-$ CrossTemplate xdf
-```
 
 ## License
 
