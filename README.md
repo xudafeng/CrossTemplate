@@ -37,7 +37,7 @@ $ npm i CrossTemplate -g
 ### Literals
 
 ```
-<#=$header#> <#$header#>
+<#=$header#>
 ```
 
 ### If / ElseIf / Else
@@ -45,7 +45,7 @@ $ npm i CrossTemplate -g
 ```
 <#if first#>
 this is first
-<#else if second#>
+<#elseif second#>
 this is second
 <#else#>
 this is else
@@ -55,7 +55,9 @@ this is else
 ### Foreach Loop
 
 ```
-<#each val,index in items#> <#$val#> <#/each#>
+<#each val,index in items#> 
+  <#$val#>
+<#/each#>
 ```
 
 ### include
@@ -75,8 +77,6 @@ this is else
 ```
 <##content#>
 ```
-
-
 
 ## License
 

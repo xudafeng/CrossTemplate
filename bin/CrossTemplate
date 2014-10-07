@@ -32,8 +32,9 @@ if (program.versions) {
 }
 
 var a = new CrossTemplate({
-  language: 'php',
+  language: 'javascript',
   template: util.file.readFile('./test/test.tpl', 'utf-8')
 });
+console.log(a.result);
 
-console.log(a.result)
+util.file.writeFile('/Users/xdf/prjs/_index.php', a.result);
