@@ -32,9 +32,9 @@ if (program.versions) {
 }
 
 var a = new CrossTemplate({
-  language: 'javascript',
+  language: 'velocity',
   template: util.file.readFile('./test/test.tpl', 'utf-8')
 });
 console.log(a.result);
 
-util.file.writeFile('/Users/xdf/prjs/_index.js', a.result);
+util.file.writeFile('/Users/xdf/prjs/_index.vm', a.result);
