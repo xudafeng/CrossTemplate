@@ -1,3 +1,4 @@
+<##comment#>
 Literals
 <#=header#>
 If / ElseIf / Else
@@ -11,7 +12,7 @@ this is else
 Foreach Loop
 <#if items#>
 <#each val,index in items#>
-<#=val#>
+<#=index#>:<#=val#>
 <#/each#>
 <#/if#>
 stop

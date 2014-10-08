@@ -37,4 +37,4 @@ var a = new CrossTemplate({
 });
 console.log(a.result);
 
-util.file.writeFile('/Users/xdf/prjs/_index.php', a.result);
+util.file.writeFile('/Users/xdf/prjs/_index.js', a.result);
