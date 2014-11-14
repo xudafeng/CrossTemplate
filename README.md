@@ -18,7 +18,7 @@ CrossTemplate
 [download-image]: https://img.shields.io/npm/dm/CrossTemplate.svg?style=flat-square
 [download-url]: https://npmjs.org/package/CrossTemplate
 
-> CrossTemplate by xdf
+> CrossTemplate
 
 ## Installment
 
@@ -26,10 +26,56 @@ CrossTemplate
 $ npm i CrossTemplate -g
 ```
 
-## Quick Start
+## Syntax
 
-```bash
-$ CrossTemplate xdf
+### Set
+
+```
+<#set#>
+```
+
+### Literals
+
+```
+<#=$header#>
+```
+
+### If / ElseIf / Else
+
+```
+<#if first#>
+this is first
+<#elseif second#>
+this is second
+<#else#>
+this is else
+<#/if#>
+```
+
+### Foreach Loop
+
+```
+<#each val,index in items#> 
+  <#$val#>
+<#/each#>
+```
+
+### include
+
+```
+<#include 'tpl', data#>
+```
+
+### stop
+
+```
+<#stop#>
+```
+
+### comment
+
+```
+<##content#>
 ```
 
 ## License
