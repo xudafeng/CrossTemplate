@@ -26,7 +26,8 @@
     "istanbul": "*",
     "should": "~4.0.4",
     "should-http": "0.0.2",
-    "startserver": "*"
+    "startserver": "*",
+    "browserify": "6.3.2"
   },
   "scripts": {
     "test": "mocha test/**/*.js",
