@@ -1489,6 +1489,10 @@ module.exports = util;
 },{"./file":12,"./string":13,"./typeof":14,"util":8}],16:[function(require,module,exports){
 var CrossTemplate = require('..');
 
-console.log(CrossTemplate)
+
+$('body').scrollspy({
+  target: '.navbar'
+});
+console.log(CrossTemplate);
 
 },{"..":1}]},{},[16]);

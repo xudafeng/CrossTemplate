@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+          cross template
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="docs/page/style/bootstrap.css"/>
+        <link rel="stylesheet" href="docs/page/style/index.css"/>
+        <script src="http://g.tbcdn.cn/kissy/k/1.4.2/seed-min.js"></script>
+        <script src="lib/crosstemplate.js"></script>
+        <script src="lib/compileToPhp.js"></script>
+        <script src="lib/compileToVm.js"></script>
+    </head>
+    <body>
+        <div id="container">
+            <div id="header">
+                <h1>
+                    cross template
+                </h1>
+                <div class="container">
+                    <nav role="navigation" class="navbar navbar-default">
+                        <div class="collapse navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li>
+                                    <a href="#demo">
+                                        Demo
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#syntax">
+                                        syntax
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#tools">
+                                        tools
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <div class="container">
+                <div id="demo">
+                    <h2>
+                        Demo
+                    </h2>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h4>
+                                cross template Input
+                            </h4>
+                            <textarea class="cm-s-default" id="input">
+<h1><#=$header#></h1>
+<#each val,index in $items#>
+  <#if $val.first#>
+    <li><strong><#=$val.name#></strong></li>
+    <#if $val.name == 'blue'#>
+    blue
+    <#/if#>
+    <#if $val.name == $val.url && $index == 2#>
+    blue
+    <#/if#>
+  <#/if#>
+  <#if $val.link #>
+    <li><a href="<#=$val.url#>"><#=$val.name#></a></li>
+  <#/if#>
+<#/each#>
+<#if $empty #>
+    <##comment content#>
+  <p>The list is empty.</p>
+<#elseif $empty!=112#>
+    <p>you cannot stop me</p>
+    <p>The list is not empty.</p>
+<#else#>
+    <p>else now!</p>
+<#/if#>
+                            </textarea>
+                        </div>
+                        <div class="col-md-6">
+                            <h4>
+                                Javascript Template
+                            </h4>
+                            <textarea class="cm-s-default" style="margin-top:22px;"
+                            id="js-tpl" disabled>
+                                
+                            </textarea>
+                        </div>
+                    </div>
+                    <h3>
+                        Outputs
+                    </h3>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h4>
+                                PHP Template
+                            </h4>
+                            <textarea class="cm-s-default" id="php-tpl" disabled>
+                            </textarea>
+                        </div>
+                        <div class="col-md-6">
+                            <h4>
+                                Velocity Template
+                            </h4>
+                            <textarea class="cm-s-default" id="vm-tpl" disabled>
+                            </textarea>
+                        </div>
+                    </div>
+                </div>
+                <div id="syntax">
+                    <h2>
+                        syntax
+                    </h2>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h4>
+                                Set
+                            </h4>
+                            <code class="cm-s-default">
+                                <#set#> ##目前未启用
+                            </code>
+                        </div>
+                    </div>
+                    <div class="row">
+                                            <div class="col-md-6">
+                            <h4>Literals
+                            </h4>
+                            <code class="cm-s-default">
+                                <#=$header#>
+                                <#$header#>
+                            </code>
+                        </div>
+                    </div>
+                    <div class="row">
+                                            <div class="col-md-6">
+                            <h4>If / ElseIf / Else
+                            </h4>
+                            <code class="cm-s-default">
+                                <#if first#>
+                                    <li>this is first</li>
+                                <#else if second#>
+                                    <li>this is second</li>
+                                <#else#>
+                                    <li>this is else</li>
+                                <#/if#>
+                            </code>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                                            <div class="col-md-6">
+                            <h4>Foreach Loop
+                            </h4>
+                            <code class="cm-s-default">
+                                <#each val,index in items#>
+                                    <#$val#>
+                                <#/each#>
+                            </code>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                                            <div class="col-md-6">
+                            <h4>include
+                            </h4>
+                            <code class="cm-s-default">
+                                <#include 'tpl', data#>
+                            </code>
+                        </div>
+                    </div>
+                    <div class="row">
+                                            <div class="col-md-6">
+                            <h4>stop
+                            </h4>
+                            <code class="cm-s-default">
+                                <#stop#>
+                            </code>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                                            <div class="col-md-6">
+                            <h4>comment
+                            </h4>
+                            <code class="cm-s-default">
+                                <##comment#>
+                            </code>
+                        </div>
+
+                    </div>
+                </div>
+                <div id="tools">
+
+
+                </div>
+            </div>
+            <div id="footer">
+            </div>
+        </div>
+        <script src="docs/page/javascript/index.js">
+        </script>
+    </body>
+</html>
