@@ -18,7 +18,9 @@ CrossTemplate
 [download-image]: https://img.shields.io/npm/dm/CrossTemplate.svg?style=flat-square
 [download-url]: https://npmjs.org/package/CrossTemplate
 
-> CrossTemplate
+> CrossTemplate @xudafeng
+
+@xudafeng
 
 ## Installment
 
